@@ -1,29 +1,40 @@
+Die tim;
 void setup()
 {
-	noLoop();
+  size(30,30);
+  noLoop();
 }
-void draw()
+void draw() 
 {
-	//your code here
+  background(100,100,100);
+  tim = new Die(3,4);
+  tim.show();
 }
-void mousePressed()
+void mousepressed()
 {
-	redraw();
 }
-class Die //models one single dice cube
+class Die
 {
-	//variable declarations here
-	
-	Die(int x, int y) //constructor
-	{
-		//variable initializations here
-	}
-	void roll()
-	{
-		//your code here
-	}
-	void show()
-	{
-		//your code here
-	}
+  int myX;
+  int myY;
+  int rng;
+      Die(int x, int y) {
+    myX= x;
+    myY = y;
+    rng = (int)(Math.random()*2)+1;
+  }
+  void roll()
+  {
+  }
+  void show()
+  {
+      fill(255,255,255);
+      rect(myX, myY, 20, 20, 7);
+      fill(10,10,10);
+      
+        //ellipse(myX+10, myY+10, 5, 5);
+        ellipse(myX+5, myY+11, 3, 3);
+        ellipse(myX+15, myY+11, 3, 3);
+      
+    }
 }
