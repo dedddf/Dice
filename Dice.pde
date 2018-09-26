@@ -44,9 +44,9 @@ class Die
   }
   void show()
   {
-    fill((int)(Math.random()*240)+1,  (int)(Math.random()*240)+1,  (int)(Math.random()*240)+1);
+    fill(255,255,255);
     rect(myX, myY, 20, 20, 7);
-    fill(10, 10, 10);
+    fill((int)(Math.random()*240)+1,  (int)(Math.random()*240)+1,  (int)(Math.random()*240)+1);
 
     if (rng==1) {
       ellipse(myX+10, myY+10, 3, 3);
