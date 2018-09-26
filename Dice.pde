@@ -1,14 +1,30 @@
 Die tim;
 void setup()
 {
-  size(30, 30);
-  noLoop();
+  size(840, 672);
+
 }
+void mousePressed()
+{
+  redraw();
+}
+
 void draw() 
 {
-  background(100, 100, 100);
-  tim = new Die(3, 4);
-  tim.show();
+  background(000, 000, 200);
+  int a = 0;
+  int b = 0;
+  for (int f=0; f<40; f++) {
+    for (int g=0; g<40; g++){
+      tim = new Die(a, b);
+      tim.show();
+      a += 21;
+    }
+    b+= 21;
+    a= 0;
+}
+ 
+   
 }
 void mousepressed()
 {
@@ -21,11 +37,10 @@ class Die
   Die(int x, int y) {
     myX= x;
     myY = y;
-    rng = (int)(Math.random()*5)+1;
+    rng = (int)(Math.random()*6)+1;
   }
   void roll()
   {
-    rng = (int)(Math.random()*5)+1;
   }
   void show()
   {
