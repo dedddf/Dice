@@ -11,7 +11,7 @@ void mousePressed()
 
 void draw() 
 {
-  background(000, 000, 200);
+  background( (int)(Math.random()*240)+1,  (int)(Math.random()*240)+1,  (int)(Math.random()*240)+1);
   int a = 0;
   int b = 0;
   for (int f=0; f<40; f++) {
@@ -23,7 +23,7 @@ void draw()
     b+= 21;
     a= 0;
 }
- 
+
    
 }
 void mousepressed()
@@ -44,7 +44,7 @@ class Die
   }
   void show()
   {
-    fill(255, 255, 255);
+    fill((int)(Math.random()*240)+1,  (int)(Math.random()*240)+1,  (int)(Math.random()*240)+1);
     rect(myX, myY, 20, 20, 7);
     fill(10, 10, 10);
 
